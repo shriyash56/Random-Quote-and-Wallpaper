@@ -1,0 +1,188 @@
+
+/* * {
+	box-sizing: border-box;
+} */
+/* html { 
+  background:no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+body {
+	
+	margin: 0;
+	transition: background 0.3s ease;
+  /* position: fixed;  */
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+}
+
+#container{
+ flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  height: 80vh;
+}
+
+#container1{
+  background-color: #000000;
+}
+
+/* Quote */
+
+h2 {
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
+  color: #eff7f8;
+  text-transform: uppercase;
+}
+
+/* Change Button */
+
+.change-btn {
+	background-color: #000;
+	border: 0;
+  border-radius: 25px;
+	color: #fff;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 18px;
+	padding: 20px 50px;
+  position: relative;
+  top: 20%;
+}
+
+.change-btn:active {
+	transform: scale(0.98);
+}
+
+.change-btn:focus {
+	outline: none;
+}
+
+.color-text {
+	font-size: 14px;
+}
+
+
+/* Heading */
+
+
+.Heading1 {
+	margin: 0 auto;
+	height: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Heading1 .text {
+	color: transparent;
+	font-size: 5vw;
+	display: inline-block;
+	border-radius: 3px;
+	background-color: #1d3557;
+	position: relative;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+.Heading1 .text:before {
+	content: attr(data-title);
+	background: linear-gradient(90deg, #f58915 0%, #fd1d1d 51%, #1d3557 100%);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	background-clip: text;
+	-webkit-background-clip: text;
+	transition: all 1s ease-in-out;
+	animation: text-animation 3s infinite;
+}
+
+@keyframes text-animation {
+	0% {
+		width: 0;
+	}
+
+	50% {
+		width: 100%;
+	}
+
+	100% {
+		width: 0;
+	}
+}
+
+
+/* Search Button */
+
+
+.searchBox {
+    position: absolute;
+    left: 50%;
+    top:73%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
